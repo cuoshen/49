@@ -7,12 +7,12 @@ public class TestPlayerController : MonoBehaviour
     [SerializeField]
     private float speed = 1.0f;
     private float rotationalSpeed = 30.0f;
-    //private Animator characterAnimator;
+    private Animator characterAnimator;
     private CharacterController characterController;
 
     private void Awake()
     {
-        //characterAnimator = gameObject.GetComponent<Animator>();
+        characterAnimator = gameObject.GetComponent<Animator>();
         characterController = gameObject.GetComponent<CharacterController>();
     }
 
@@ -24,7 +24,7 @@ public class TestPlayerController : MonoBehaviour
         Vector2 displacement = direction * speed * Time.deltaTime;
 
         characterController.Move(new Vector3(displacement.x, 0.0f, displacement.y));
-        //characterAnimator.SetFloat("Speed", rawInput.magnitude);
+        characterAnimator.SetFloat("Speed", rawInput.magnitude);
 
         Vector3 newDirection = Vector3.RotateTowards(transform.forward, new Vector3(direction.x, 0.0f, direction.y), rotationalSpeed * Time.deltaTime, 0.0f);
         transform.rotation = Quaternion.LookRotation(newDirection);
