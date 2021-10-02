@@ -8,10 +8,12 @@ public class TestPlayerController : MonoBehaviour
     private float speed = 1.0f;
     private float rotationalSpeed = 30.0f;
     private Animator characterAnimator;
+    private CharacterController characterController;
 
     private void Awake()
     {
         characterAnimator = gameObject.GetComponent<Animator>();
+        characterController = gameObject.GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
@@ -20,7 +22,8 @@ public class TestPlayerController : MonoBehaviour
         Vector2 rawInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         Vector2 direction = rawInput.normalized;
         Vector2 displacement = direction * speed * Time.deltaTime;
-        gameObject.transform.position += new Vector3(displacement.x, 0.0f, displacement.y);
+
+        characterController.Move(new Vector3(displacement.x, 0.0f, displacement.y));
         characterAnimator.SetFloat("Speed", rawInput.magnitude);
 
         Vector3 newDirection = Vector3.RotateTowards(transform.forward, new Vector3(direction.x, 0.0f, direction.y), rotationalSpeed * Time.deltaTime, 0.0f);
