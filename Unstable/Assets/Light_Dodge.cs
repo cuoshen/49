@@ -14,7 +14,6 @@ public class Light_Dodge : MonoBehaviour
         player_hp = 10;
         player_score = 0;
         counter = 60;
-
     }
 
     // Update is called once per frame
@@ -29,7 +28,6 @@ public class Light_Dodge : MonoBehaviour
         }
         else
             counter++;
-        
     }
 
     void OnGUI()

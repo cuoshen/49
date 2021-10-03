@@ -5,16 +5,16 @@ using UnityEngine;
 public class Spot_Light : MonoBehaviour
 {
     public bool player_casted = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
+    [SerializeField]
+    private GameObject player;
 
     // Update is called once per frame
     void Update()
     {
-        Ray ray = new Ray(transform.position, GameObject.Find("Test Character").transform.position - transform.position);
+        Vector3 Light2Player = (player.transform.position - transform.position).normalized;
+
+        Ray ray = new Ray(transform.position, Light2Player);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
         {
