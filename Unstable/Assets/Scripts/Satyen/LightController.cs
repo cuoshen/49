@@ -61,6 +61,7 @@ public class LightController : MonoBehaviour
             lightBlueLight.SetActive(true);
             yield return new WaitForSeconds(2);
             lightBlueLight.SetActive(false);
+            yield return new WaitForSeconds(5);
             blueLight.SetActive(true);
             yield return new WaitForSeconds(2);
 
