@@ -231,6 +231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player_casted: 0
   player: {fileID: 1821911703}
+  speed: 0.01
 --- !u!1 &169337578
 GameObject:
   m_ObjectHideFlags: 0
