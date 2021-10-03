@@ -13,6 +13,10 @@ public class TestPlayerController : MonoBehaviour
     private float gravity = 9.8f;
     [SerializeField]
     private float verticalSpeed = 0.0f;
+    [SerializeField]
+    private bool isGrounded = true;
+
+    int layerMask = 1 << 6;
 
     private void Awake()
     {
@@ -29,10 +33,22 @@ public class TestPlayerController : MonoBehaviour
         Vector3 displacement = new Vector3();
         displacement.x = displacementXY.x; displacement.z = displacementXY.y;
 
-        verticalSpeed -= gravity * Time.deltaTime;
-        if (characterController.isGrounded)
+        isGrounded = false;
+        RaycastHit hit;
+        // Does the ray intersect any objects excluding the player layer
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, Mathf.Infinity, layerMask))
         {
-            verticalSpeed = 0.0f;
+            Debug.DrawRay(transform.position, Vector3.down * hit.distance, Color.green);
+            if (hit.distance <= 0.5f)
+            {
+                isGrounded = true;
+            }
+        }
+
+            verticalSpeed -= gravity * Time.deltaTime;
+        if (isGrounded)
+        {
+            verticalSpeed = -gravity * Time.deltaTime;
         }
 
         characterAnimator.SetFloat("Speed", rawInput.magnitude);

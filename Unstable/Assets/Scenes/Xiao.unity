@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 38009591}
   - component: {fileID: 38009590}
   - component: {fileID: 38009589}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -737,6 +737,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2966081282001887438, guid: 83b0694ed830be1408ea848e0b095eea, type: 3}
+      propertyPath: m_Center.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2966081282001887438, guid: 83b0694ed830be1408ea848e0b095eea, type: 3}
+      propertyPath: m_MinMoveDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1375224018, guid: 83b0694ed830be1408ea848e0b095eea, type: 3}
+      propertyPath: isGrounded
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 227710794708229335, guid: 83b0694ed830be1408ea848e0b095eea, type: 3}
       propertyPath: m_Name
       value: Test Character
@@ -987,7 +999,7 @@ GameObject:
   - component: {fileID: 1702031335}
   - component: {fileID: 1702031334}
   - component: {fileID: 1702031333}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
