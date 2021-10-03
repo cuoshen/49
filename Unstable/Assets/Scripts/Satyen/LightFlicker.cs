@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class LightFlicker : MonoBehaviour
 {
+    private bool moot;
     // Start is called before the first frame update
     void Start()
     {
+        moot = true;
         StartCoroutine(LightCycle());
     }
 
 
     IEnumerator LightCycle()
     {
-        while (true)
+        while (moot)
         {
             yield return new WaitForSeconds(1);
             gameObject.SetActive(true);

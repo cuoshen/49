@@ -9,17 +9,22 @@ public class Move : MonoBehaviour
     public float upperHeight;
     public float lowerHeight;
     public float movementSpeed;
+    public float radiusSpeed;
+    public GameObject lightSource;
 
     private Vector3 starting;
     private bool moving;
+    private bool enlarging;
     private float timePassed;
     private float movement;
+    private float radius;
 
     private void Start()
     {
         starting = lightObject.transform.position;
         moving = true;
         movement = 1f;
+        radius = 0.5f;
     }
 
 
@@ -29,6 +34,8 @@ public class Move : MonoBehaviour
         {
             lightObject.transform.position = new Vector3(0, movementSpeed * movement, 0) + starting;
             starting = lightObject.transform.position;
+            lightSource.GetComponent<SphereCollider>().radius = radius + (movement * radiusSpeed);
+            radius = lightSource.GetComponent<SphereCollider>().radius;
         }
 
         if (lightObject.transform.position.y < lowerHeight ||
