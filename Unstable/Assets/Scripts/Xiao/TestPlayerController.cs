@@ -9,6 +9,14 @@ public class TestPlayerController : MonoBehaviour
     private float rotationalSpeed = 30.0f;
     private Animator characterAnimator;
     private CharacterController characterController;
+    [SerializeField]
+    private float gravity = 9.8f;
+    [SerializeField]
+    private float verticalSpeed = 0.0f;
+    [SerializeField]
+    private bool isGrounded = true;
+
+    int layerMask = 1 << 6;
 
     private void Awake()
     {
@@ -21,10 +29,34 @@ public class TestPlayerController : MonoBehaviour
     {
         Vector2 rawInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         Vector2 direction = rawInput.normalized;
-        Vector2 displacement = direction * speed * Time.deltaTime;
+        Vector2 displacementXY = direction * speed * Time.deltaTime;
+        Vector3 displacement = new Vector3();
+        displacement.x = displacementXY.x; displacement.z = displacementXY.y;
 
-        characterController.Move(new Vector3(displacement.x, 0.0f, displacement.y));
+        isGrounded = false;
+        RaycastHit hit;
+        // Does the ray intersect any objects excluding the player layer
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, Mathf.Infinity, layerMask))
+        {
+            Debug.DrawRay(transform.position, Vector3.down * hit.distance, Color.green);
+            if (hit.distance <= 0.5f)
+            {
+                isGrounded = true;
+            }
+        }
+
+            verticalSpeed -= gravity * Time.deltaTime;
+        if (isGrounded)
+        {
+            verticalSpeed = -gravity * Time.deltaTime;
+        }
+
         characterAnimator.SetFloat("Speed", rawInput.magnitude);
+        characterAnimator.SetFloat("VerticalSpeed", verticalSpeed);
+
+        displacement.y = verticalSpeed * Time.deltaTime;
+
+        characterController.Move(displacement);
 
         Vector3 newDirection = Vector3.RotateTowards(transform.forward, new Vector3(direction.x, 0.0f, direction.y), rotationalSpeed * Time.deltaTime, 0.0f);
         transform.rotation = Quaternion.LookRotation(newDirection);
