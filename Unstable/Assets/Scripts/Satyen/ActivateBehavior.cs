@@ -21,10 +21,8 @@ public class ActivateBehavior : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("triggered");
         if (other.gameObject.CompareTag("Activate"))
         {
-            Debug.Log("activate text");
             activateTextMessage.SetActive(true);
         }
     }
