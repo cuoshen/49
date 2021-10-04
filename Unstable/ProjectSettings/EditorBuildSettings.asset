@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Clea.unity
     guid: 5ed58e0c613744248853f6bc502a755c
   - enabled: 1
-    path: Assets/Scenes/Clea 2.unity
+    path: Assets/Scenes/Open Rooms.unity
     guid: b0bc6197898784d559c1fc04ef1cdf32
   m_configObjects: {}
