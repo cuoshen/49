@@ -5,7 +5,7 @@ using UnityEngine;
 public class TestPlayerController : MonoBehaviour
 {
     [SerializeField]
-    private float speed = 1.0f;
+    private float speed = 5.0f;
     private float rotationalSpeed = 30.0f;
     private Animator characterAnimator;
     private CharacterController characterController;
@@ -28,5 +28,25 @@ public class TestPlayerController : MonoBehaviour
 
         Vector3 newDirection = Vector3.RotateTowards(transform.forward, new Vector3(direction.x, 0.0f, direction.y), rotationalSpeed * Time.deltaTime, 0.0f);
         transform.rotation = Quaternion.LookRotation(newDirection);
+    }
+
+    public void upSpeed(float n)
+    {
+        speed += n;
+    }
+
+    public void deSpeed(float n)
+    {
+        speed -= n;
+    }
+
+    public void setSpeed(float n)
+    {
+        speed = n;
+    }
+
+    public float getSpeed()
+    {
+        return speed;
     }
 }
