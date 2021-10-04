@@ -14,8 +14,8 @@ public class CountDownBar : MonoBehaviour
     public Slider countdownBar;
     private bool countDown = true;
 
-    public float countDownTime = 8;
-    public float refillTime = 10;
+    public float countDownTime = 90;
+    public float refillTime = 90;
 
     private void Start()
     {
