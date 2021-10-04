@@ -10,7 +10,7 @@ public class HealthPickUp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.SetActive(true);
+        showHealthPack();
         countdownbar = FindObjectOfType<Canvas>().GetComponentInChildren<CountDownBar>();
     }
 
@@ -20,13 +20,18 @@ public class HealthPickUp : MonoBehaviour
         
     }
 
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         //if (other.tag == "Player") // <<< Something like this
         //{
             gameObject.SetActive(false);
         //}
 
-        countdownbar.changeHealth(3);
+        countdownbar.changeHealth(5);
+    }
+
+    public void showHealthPack()
+    {
+        gameObject.SetActive(true);
     }
 }
