@@ -26,6 +26,7 @@ public class Valve : MonoBehaviour
         {
             if (color == "green")
             {
+                Debug.Log("green activated");
                 platformManager.greenUp = !platformManager.greenUp;
             }
             if (color == "red")

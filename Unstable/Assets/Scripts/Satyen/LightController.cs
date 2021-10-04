@@ -39,6 +39,7 @@ public class LightController : MonoBehaviour
         {
             Debug.Log("DONE!!!!11!1");
             gameObject.transform.position = new Vector3(116.71f, -49f, 113.02f);
+            turnedWheels.Add(0);
         }
     }
 

@@ -23,6 +23,8 @@ public class PlatformMovement : MonoBehaviour
     private Vector3 startingDown;
     private Vector3 startingHorizontalOne;
     private Vector3 startingHorizontalTwo;
+    private Vector3 actStartUp;
+    private Vector3 actStartHorizontal;
     private bool moving;
     private bool movingHorizontal;
     private float timePassed;
@@ -35,8 +37,11 @@ public class PlatformMovement : MonoBehaviour
     {
         startingUp = upCycle.transform.position;
         startingDown = downCycle.transform.position;
+        actStartUp = startingUp;
         startingHorizontalOne = horizontalPlatformOne.transform.position;
         startingHorizontalTwo = horizontalPlatformTwo.transform.position;
+        actStartHorizontal = startingHorizontalOne;
+        
         moving = true;
         movingHorizontal = true;
         timePassed = 0f;
@@ -47,7 +52,7 @@ public class PlatformMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(upCycle.transform.position.y);
+        //Debug.Log(upCycle.transform.position.y);
         if (moving)
         {
             upCycle.transform.position = new Vector3(0, movementSpeed * movement, 0) + startingUp;
@@ -56,8 +61,8 @@ public class PlatformMovement : MonoBehaviour
             startingDown = downCycle.transform.position;
         }
 
-        if (upCycle.transform.position.y < lowerHeight ||
-            upCycle.transform.position.y > upperHeight)
+        if (upCycle.transform.position.y - actStartUp.y < lowerHeight ||
+            upCycle.transform.position.y - actStartUp.y > upperHeight)
         {
             timePassed += Time.deltaTime;
             if (timePassed > timeToWait)
@@ -81,8 +86,8 @@ public class PlatformMovement : MonoBehaviour
 
         }
 
-        if (horizontalPlatformOne.transform.position.x < horizontalOneLower ||
-            horizontalPlatformOne.transform.position.x > horizontalOneUpper)
+        if (horizontalPlatformOne.transform.position.x - actStartHorizontal.x < horizontalOneLower ||
+            horizontalPlatformOne.transform.position.x - actStartHorizontal.x > horizontalOneUpper)
         {
             horizontalTimePassed += Time.deltaTime;
             if (horizontalTimePassed > timeToWait)
