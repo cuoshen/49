@@ -7,6 +7,11 @@ TagManager:
   - spotlight
   - box_red
   - box_green
+<<<<<<< HEAD
+=======
+  - Activate
+  - Radiation
+>>>>>>> main
   layers:
   - Default
   - TransparentFX
@@ -14,7 +19,11 @@ TagManager:
   - 
   - Water
   - UI
+<<<<<<< HEAD
   - Floor
+=======
+  - floor
+>>>>>>> main
   - 
   - 
   - 
