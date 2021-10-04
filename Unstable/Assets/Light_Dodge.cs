@@ -7,6 +7,8 @@ public class Light_Dodge : MonoBehaviour
     private float player_hp;
     private Spot_Light_Red rcasted;
     private Spot_Light_Green gcasted;
+    public bool in_red = false;
+    public bool in_green = false;
     private TestPlayerController playerControl;
     private int counter;
     private float previous_speed = 0;
@@ -19,7 +21,7 @@ public class Light_Dodge : MonoBehaviour
     {
         player_hp = 10;
         counter = 60;
-        playerControl = GameObject.Find("Test Character").GetComponent<TestPlayerController>();
+        playerControl = GameObject.Find("Player").GetComponent<TestPlayerController>();
         rcasted = GameObject.Find("SpotLight_Red").GetComponent<Spot_Light_Red>();
         gcasted = GameObject.Find("SpotLight_Green").GetComponent<Spot_Light_Green>();
     }
@@ -46,6 +48,8 @@ public class Light_Dodge : MonoBehaviour
 
         if (InRed())
         {
+            in_red = true;
+            in_green = false;
             if (!rcasted.rlight_stopped)
             {
                 if (!speed_recovered)
@@ -79,6 +83,8 @@ public class Light_Dodge : MonoBehaviour
 
         else if (InGreen())
         {
+            in_red = false;
+            in_green = true;
             if (!gcasted.glight_stopped)
             {
                 if (!speed_recovered)
@@ -114,14 +120,17 @@ public class Light_Dodge : MonoBehaviour
 
     void OnGUI()
     {
-        GUI.Label(new Rect(Screen.width - 100, Screen.height - 50, 155, 30), "Player HP: " + player_hp);
-        GUI.Label(new Rect(Screen.width - 200, Screen.height - 300, 155, 60), "Hide under the shadow to survive");
-        GUI.Label(new Rect(Screen.width - 200, Screen.height - 150, 155, 60), "Press 'Q' and 'E' to stop light movement");
+        if (gameObject.transform.position.y < -40)
+        {
+            GUI.Label(new Rect(Screen.width - 100, Screen.height - 50, 155, 30), "Player HP: " + player_hp);
+            GUI.Label(new Rect(Screen.width - 200, Screen.height - 300, 155, 60), "Hide under the shadow to survive");
+            GUI.Label(new Rect(Screen.width - 200, Screen.height - 150, 155, 60), "Press 'Q' and 'E' to stop light movement");
+        }
     }
 
     private bool InRed()
     {
-        if (gameObject.transform.position.x > 0)
+        if (gameObject.transform.position.x > 96)
         {
             return true;
         }
@@ -133,7 +142,7 @@ public class Light_Dodge : MonoBehaviour
 
     private bool InGreen()
     {
-        if (gameObject.transform.position.x < 0)
+        if (gameObject.transform.position.x < 96)
         {
             return true;
         }
