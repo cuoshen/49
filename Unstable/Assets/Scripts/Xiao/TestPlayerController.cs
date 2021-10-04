@@ -15,6 +15,8 @@ public class TestPlayerController : MonoBehaviour
     private float verticalSpeed = 0.0f;
     [SerializeField]
     private bool isGrounded = true;
+    [SerializeField]
+    private GameObject mainCamera;
 
     int layerMask = 1 << 6;
 
@@ -45,7 +47,7 @@ public class TestPlayerController : MonoBehaviour
             }
         }
 
-            verticalSpeed -= gravity * Time.deltaTime;
+        verticalSpeed -= gravity * Time.deltaTime;
         if (isGrounded)
         {
             verticalSpeed = -gravity * Time.deltaTime;
