@@ -24,7 +24,7 @@ public class Move : MonoBehaviour
         starting = lightObject.transform.position;
         moving = true;
         movement = 1f;
-        radius = 0.5f;
+        radius = lightSource.GetComponent<SphereCollider>().radius;
     }
 
 
@@ -35,6 +35,7 @@ public class Move : MonoBehaviour
             lightObject.transform.position = new Vector3(0, movementSpeed * movement, 0) + starting;
             starting = lightObject.transform.position;
             lightSource.GetComponent<SphereCollider>().radius = radius + (movement * radiusSpeed);
+            Debug.Log(radius);
             radius = lightSource.GetComponent<SphereCollider>().radius;
         }
 
