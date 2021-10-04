@@ -115,6 +115,8 @@ public class Light_Dodge : MonoBehaviour
     void OnGUI()
     {
         GUI.Label(new Rect(Screen.width - 100, Screen.height - 50, 155, 30), "Player HP: " + player_hp);
+        GUI.Label(new Rect(Screen.width - 200, Screen.height - 300, 155, 60), "Hide under the shadow to survive");
+        GUI.Label(new Rect(Screen.width - 200, Screen.height - 150, 155, 60), "Press 'Q' and 'E' to stop light movement");
     }
 
     private bool InRed()
