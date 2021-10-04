@@ -592,6 +592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateTextMessage: {fileID: 1805417041}
+  teleportDestination: {x: 0, y: 0, z: 0}
 --- !u!1 &189462799
 GameObject:
   m_ObjectHideFlags: 0
@@ -3908,7 +3909,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 207891149, guid: 20ae9eb2042a9a649bd7d5567eadd2fc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.4063473
+      value: 7.28
       objectReference: {fileID: 0}
     - target: {fileID: 207891149, guid: 20ae9eb2042a9a649bd7d5567eadd2fc, type: 3}
       propertyPath: m_LocalRotation.w
