@@ -29427,7 +29427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08d46d139f897684fbe6c7390d205cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 7478306772835622867}
   color: blue
 --- !u!33 &5873884711166130960
 MeshFilter:
@@ -30194,7 +30194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08d46d139f897684fbe6c7390d205cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 7478306772835622867}
   color: purple
 --- !u!1001 &5873884711380254663
 PrefabInstance:
@@ -32054,7 +32054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08d46d139f897684fbe6c7390d205cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 7478306772835622867}
   color: green
 --- !u!1001 &5873884711631270524
 PrefabInstance:
@@ -33762,7 +33762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08d46d139f897684fbe6c7390d205cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 7478306772835622867}
   color: green
 --- !u!1 &5873884711977035431 stripped
 GameObject:
@@ -34052,7 +34052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08d46d139f897684fbe6c7390d205cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 7478306772835622867}
   color: yellow
 --- !u!135 &5873884712031025405
 SphereCollider:
@@ -37120,7 +37120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08d46d139f897684fbe6c7390d205cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 7478306772835622867}
   color: blue
 --- !u!4 &5873884712492092949
 Transform:
@@ -38558,7 +38558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08d46d139f897684fbe6c7390d205cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 7478306772835622867}
   color: red
 --- !u!135 &5873884712638058255
 SphereCollider:
@@ -53424,6 +53424,34 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4466220083757315366, guid: e99f27b1087a5a745b90b4b404321c08, type: 3}
   m_PrefabInstance: {fileID: 7478306772835622866}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7478306772835622873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7478306772835622867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0351573727f8ec64eb215008da361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  greenUp: 0
+  blueUp: 0
+  redUp: 0
+  yellowUp: 0
+  purpleUp: 0
+  GreenUp: {fileID: 5873884711672127422}
+  BlueDown: {fileID: 5873884712626507907}
+  RedUp: {fileID: 5873884712862672894}
+  RedDown: {fileID: 5873884712901793109}
+  YellowDown: {fileID: 5873884712310907097}
+  PurpleDown: {fileID: 5873884712591172072}
+  GreenDown: {fileID: 5873884712173528901}
+  BlueUp: {fileID: 5873884711360833007}
+  movementSpeed: 0
+  upperHeight: 0
+  lowerHeight: 0
 --- !u!1001 &7478306772890223248
 PrefabInstance:
   m_ObjectHideFlags: 0
