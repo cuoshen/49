@@ -29,7 +29,7 @@ public class LightController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(turnedWheels[turnedWheels.Count - 1]);
+        //Debug.Log(turnedWheels[turnedWheels.Count - 1]);
         if( (int)(turnedWheels[turnedWheels.Count - 1]) == 6 &&
             (int)(turnedWheels[turnedWheels.Count - 2]) == 5 &&
             (int)(turnedWheels[turnedWheels.Count - 3]) == 4 &&
@@ -38,6 +38,7 @@ public class LightController : MonoBehaviour
             (int)(turnedWheels[turnedWheels.Count - 6]) == 1)
         {
             Debug.Log("DONE!!!!11!1");
+            gameObject.transform.position = new Vector3(116.71f, -49f, 113.02f);
         }
     }
 

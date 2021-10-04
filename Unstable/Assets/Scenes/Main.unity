@@ -20110,15 +20110,15 @@ Transform:
   m_LocalPosition: {x: 80.8, y: 22.17, z: 110.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 4853696726520452582}
   - {fileID: 4853696725263391815}
   - {fileID: 4853696725679958387}
   - {fileID: 4853696725129341388}
   - {fileID: 4853696725976214317}
   - {fileID: 4853696726004807496}
   - {fileID: 4853696724734646743}
-  - {fileID: 4853696725089904126}
-  - {fileID: 4853696726520452582}
   - {fileID: 4853696725260907651}
+  - {fileID: 4853696725089904126}
   - {fileID: 4853696725239734399}
   - {fileID: 4853696725670226505}
   - {fileID: 4853696726455131489}
@@ -20492,7 +20492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd213e3304448a4fbf0ff0b7a5e2e40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 7478306772835622867}
   sequenceNumber: 6
 --- !u!33 &4853696725019727779
 MeshFilter:
@@ -21360,7 +21360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd213e3304448a4fbf0ff0b7a5e2e40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 7478306772835622867}
   sequenceNumber: 3
 --- !u!135 &4853696725260336228
 SphereCollider:
@@ -21397,7 +21397,7 @@ Transform:
   - {fileID: 4853696726256219966}
   - {fileID: 4853696725039351806}
   m_Father: {fileID: 4853696724860191271}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4853696725260907652
 GameObject:
@@ -22833,7 +22833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd213e3304448a4fbf0ff0b7a5e2e40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 7478306772835622867}
   sequenceNumber: 1
 --- !u!23 &4853696725630175968
 MeshRenderer:
@@ -23544,7 +23544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd213e3304448a4fbf0ff0b7a5e2e40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 7478306772835622867}
   sequenceNumber: 5
 --- !u!33 &4853696726031471210
 MeshFilter:
@@ -24610,7 +24610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd213e3304448a4fbf0ff0b7a5e2e40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 7478306772835622867}
   sequenceNumber: 2
 --- !u!135 &4853696726383524008
 SphereCollider:
@@ -25013,7 +25013,7 @@ Transform:
   - {fileID: 4853696726606800461}
   - {fileID: 4853696725019727782}
   m_Father: {fileID: 4853696724860191271}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4853696726520452583
 GameObject:
@@ -25713,7 +25713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd213e3304448a4fbf0ff0b7a5e2e40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 7478306772835622867}
   sequenceNumber: 4
 --- !u!33 &4853696726698693995
 MeshFilter:
@@ -25923,7 +25923,7 @@ MonoBehaviour:
   player_casted: 0
   gbox_covered: 0
   glight_stopped: 0
-  player: {fileID: 0}
+  player: {fileID: 7478306772835622867}
   speed: 1
   box: {fileID: 5803754578458695620}
 --- !u!108 &5803754578091689089
@@ -28271,7 +28271,7 @@ MonoBehaviour:
   player_casted: 0
   rbox_covered: 0
   rlight_stopped: 0
-  player: {fileID: 0}
+  player: {fileID: 7478306772835622867}
   speed: 1
   box: {fileID: 5803754579947097492}
 --- !u!108 &5803754580005760140
@@ -31182,9 +31182,9 @@ Transform:
   m_LocalPosition: {x: 44.41, y: 20.5, z: 45.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 5873884712898295247}
   - {fileID: 5873884711520764208}
   - {fileID: 5873884711502070912}
-  - {fileID: 5873884712898295247}
   - {fileID: 5873884711539629348}
   - {fileID: 5873884712694039400}
   - {fileID: 5873884712722676958}
@@ -40074,7 +40074,7 @@ Transform:
   - {fileID: 5873884711220430075}
   - {fileID: 5873884712845584312}
   m_Father: {fileID: 5873884711516180340}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &5873884712900441448
 MeshRenderer:
@@ -53345,9 +53345,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3940899453537464220, guid: e99f27b1087a5a745b90b4b404321c08, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 4466220083757315366, guid: e99f27b1087a5a745b90b4b404321c08, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4466220083757315366, guid: e99f27b1087a5a745b90b4b404321c08, type: 3}
       propertyPath: m_LocalPosition.x
@@ -53396,6 +53400,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3940899453537464220, guid: e99f27b1087a5a745b90b4b404321c08, type: 3}
   m_PrefabInstance: {fileID: 7478306772835622866}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7478306772835622868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7478306772835622867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46c6d9f05d501fa44b72756ad0d19761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blueLight: {fileID: 4853696726254769965}
+  redLight: {fileID: 4853696725289171226}
+  greenLight: {fileID: 4853696725361507990}
+  yellowLight: {fileID: 4853696724875487154}
+  lightBlueLight: {fileID: 4853696725904451260}
+  purpleLight: {fileID: 4853696725760321982}
+  turnedWheels: 
 --- !u!4 &7478306772835622871 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4466220083757315366, guid: e99f27b1087a5a745b90b4b404321c08, type: 3}

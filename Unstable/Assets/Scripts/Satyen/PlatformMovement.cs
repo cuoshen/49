@@ -47,6 +47,7 @@ public class PlatformMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Debug.Log(upCycle.transform.position.y);
         if (moving)
         {
             upCycle.transform.position = new Vector3(0, movementSpeed * movement, 0) + startingUp;

@@ -29,7 +29,7 @@ public class PuzzleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(player.transform.position);
+        //Debug.Log(player.transform.position);
         if (numPressed >= 30)
         {
             gameWon = true;
