@@ -4,8 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Activate
-  - Radiation
+<<<<<<< HEAD
+  - spotlight
+  - box_red
+  - box_green
+>>>>>>> main
   layers:
   - Default
   - TransparentFX
