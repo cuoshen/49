@@ -2015,7 +2015,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 145.9, y: 156.5}
+  m_AnchoredPosition: {x: -222, y: 158}
   m_SizeDelta: {x: 192.72, y: 28.094}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &701614290
@@ -2062,7 +2062,7 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   fill: {fileID: 607022228}
   countdownBar: {fileID: 701614291}
-  countDownTime: 99
+  countDownTime: 100
   refillTime: 100
 --- !u!114 &701614291
 MonoBehaviour:
@@ -2739,15 +2739,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2023517909, guid: 1d7cf80ff985b3d4da86a46d77ed1a1e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.1498363
+      value: 1.34
       objectReference: {fileID: 0}
     - target: {fileID: 2023517909, guid: 1d7cf80ff985b3d4da86a46d77ed1a1e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.038717695
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 2023517909, guid: 1d7cf80ff985b3d4da86a46d77ed1a1e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.0776634
+      value: 2.18
       objectReference: {fileID: 0}
     - target: {fileID: 2023517909, guid: 1d7cf80ff985b3d4da86a46d77ed1a1e, type: 3}
       propertyPath: m_LocalRotation.w
