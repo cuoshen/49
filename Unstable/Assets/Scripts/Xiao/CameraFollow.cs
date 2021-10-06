@@ -7,9 +7,9 @@ public class CameraFollow : MonoBehaviour
     [SerializeField]
     private Vector3 displacement;
     [SerializeField]
-    private Vector3 eulerViewAngle;
+    private float rotation = 0;
     [SerializeField]
-    private int phase = 0;
+    private float angularSpeed = 0.1f;
     [SerializeField]
     private float cameraSpeed = 10.0f;
 
@@ -18,15 +18,15 @@ public class CameraFollow : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKey(KeyCode.Z))
         {
-            phase++;
+            rotation += angularSpeed;
         }
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKey(KeyCode.C))
         {
-            phase--;
+            rotation -= angularSpeed;
         }
-        Vector3 finalDisplacement = Quaternion.EulerAngles(0, phase * 90.0f, 0) * displacement;
+        Vector3 finalDisplacement = Quaternion.Euler(0, rotation, 0) * displacement;
         // Direct update
         //gameObject.transform.position = player.transform.position + finalDisplacement;
         Vector3 newPosition = player.transform.position + finalDisplacement;
