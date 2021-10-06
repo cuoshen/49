@@ -10,7 +10,7 @@ public class PuzzleManager : MonoBehaviour
     public PressurePlate mostRecentPlate; // Points to the most recently-stepped on pressure plate
 
     [SerializeField]
-    private Vector3 teleportDestination;
+    private Transform teleportDestination;
 
     public int numPressed;
     [SerializeField]
@@ -29,7 +29,6 @@ public class PuzzleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(player.transform.position);
         if (numPressed >= 30)
         {
             gameWon = true;
@@ -48,7 +47,7 @@ public class PuzzleManager : MonoBehaviour
         gameLost = true;
         player.GetComponent<TestPlayerController>().enabled = false; // Teleports player back to teleportDestination
         player.GetComponent<CharacterController>().enabled = false;
-        player.transform.position = teleportDestination;
+        player.transform.position = teleportDestination.position;
         player.GetComponent<TestPlayerController>().enabled = true;
         player.GetComponent<CharacterController>().enabled = true;
     }
