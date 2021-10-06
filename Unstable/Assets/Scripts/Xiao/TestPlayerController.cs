@@ -13,7 +13,6 @@ public class TestPlayerController : MonoBehaviour
     private float gravity = 9.8f;
     [SerializeField]
     private float verticalSpeed = 0.0f;
-    [SerializeField]
     private bool isGrounded = true;
     [SerializeField]
     private GameObject mainCamera;
@@ -29,8 +28,11 @@ public class TestPlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector2 cameraForwardProjected = new Vector2(mainCamera.transform.forward.x, mainCamera.transform.forward.z).normalized;
+        Vector2 cameraRightProjected = new Vector2(mainCamera.transform.right.x, mainCamera.transform.right.z).normalized;
         Vector2 rawInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        Vector2 direction = rawInput.normalized;
+        rawInput = rawInput.normalized;
+        Vector2 direction = rawInput.y * cameraForwardProjected + rawInput.x * cameraRightProjected;
         Vector2 displacementXY = direction * speed * Time.deltaTime;
         Vector3 displacement = new Vector3();
         displacement.x = displacementXY.x; displacement.z = displacementXY.y;
