@@ -20,4 +20,11 @@ public class RadiationManager : MonoBehaviour
         player.GetComponent<TestPlayerController>().enabled = true;
         player.GetComponent<CharacterController>().enabled = true;
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Radiation"))
+        {
+            KillMe();
+        }
+    }
 }
