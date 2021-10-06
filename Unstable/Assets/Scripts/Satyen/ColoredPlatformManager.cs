@@ -28,6 +28,8 @@ public class ColoredPlatformManager : MonoBehaviour
     private Vector3 purpleDownPos;
     private Vector3 greenDownPos;
     private Vector3 blueUpPos;
+    private Vector3 startHeightLow;
+    private Vector3 startHeightHigh;
 
     public float movementSpeed;
     public float upperHeight;
@@ -55,6 +57,8 @@ public class ColoredPlatformManager : MonoBehaviour
         purpleDownPos = PurpleDown.transform.position;
         greenDownPos = GreenDown.transform.position;
         blueUpPos = BlueUp.transform.position;
+        startHeightHigh = BlueUp.transform.position;
+        startHeightLow = YellowDown.transform.position;
 
         movementGreen = 1f;
         movementBlue = 1f;
@@ -74,8 +78,8 @@ public class ColoredPlatformManager : MonoBehaviour
             greenUpPos = GreenUp.transform.position;
             greenDownPos = GreenDown.transform.position;
         }
-        if ((GreenUp.transform.position.y < lowerHeight ||
-            GreenUp.transform.position.y > upperHeight) && greenUp)
+        if ((GreenUp.transform.position.y - startHeightHigh.y < lowerHeight ||
+            GreenUp.transform.position.y - startHeightHigh.y > upperHeight) && greenUp)
         {
             greenUp = false;
             movementGreen *= -1;
@@ -88,8 +92,8 @@ public class ColoredPlatformManager : MonoBehaviour
             blueUpPos = BlueUp.transform.position;
             blueDownPos = BlueDown.transform.position;
         }
-        if ((BlueUp.transform.position.y < lowerHeight ||
-            BlueUp.transform.position.y > upperHeight) && blueUp)
+        if ((BlueUp.transform.position.y - startHeightHigh.y < lowerHeight ||
+            BlueUp.transform.position.y - startHeightHigh.y > upperHeight) && blueUp)
         {
             blueUp = false;
             movementBlue *= -1;
@@ -102,8 +106,8 @@ public class ColoredPlatformManager : MonoBehaviour
             redUpPos = RedUp.transform.position;
             redDownPos = RedDown.transform.position;
         }
-        if ((RedUp.transform.position.y < lowerHeight ||
-            RedUp.transform.position.y > upperHeight) && redUp)
+        if ((RedUp.transform.position.y - startHeightHigh.y < lowerHeight ||
+            RedUp.transform.position.y - startHeightHigh.y > upperHeight) && redUp)
         {
             redUp = false;
             movementRed *= -1;
@@ -111,11 +115,11 @@ public class ColoredPlatformManager : MonoBehaviour
 
         if (yellowUp)
         {
-            YellowDown.transform.position = new Vector3(0, movementSpeed * movementYellow, 0) + yellowDownPos;
+            YellowDown.transform.position = new Vector3(0, movementSpeed * movementYellow * -1, 0) + yellowDownPos;
             yellowDownPos = YellowDown.transform.position;
         }
-        if ((YellowDown.transform.position.y < lowerHeight ||
-            YellowDown.transform.position.y > upperHeight) && yellowUp)
+        if ((YellowDown.transform.position.y - startHeightLow.y < lowerHeight + 1.5 ||
+            YellowDown.transform.position.y - startHeightLow.y > upperHeight + 1.5) && yellowUp)
         {
             yellowUp = false;
             movementYellow *= -1;
@@ -123,11 +127,11 @@ public class ColoredPlatformManager : MonoBehaviour
 
         if (purpleUp)
         {
-            PurpleDown.transform.position = new Vector3(0, movementSpeed * movementPurple, 0) + purpleDownPos;
+            PurpleDown.transform.position = new Vector3(0, movementSpeed * movementPurple * -1, 0) + purpleDownPos;
             purpleDownPos = PurpleDown.transform.position;
         }
-        if ((PurpleDown.transform.position.y < lowerHeight ||
-            PurpleDown.transform.position.y > upperHeight) && purpleUp)
+        if ((PurpleDown.transform.position.y - startHeightLow.y < lowerHeight + 1.5 ||
+            PurpleDown.transform.position.y - startHeightLow.y > upperHeight + 1.5) && purpleUp)
         {
             purpleUp = false;
             movementPurple *= -1;
