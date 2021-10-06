@@ -25878,7 +25878,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &4853696726606800458
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -41299,7 +41299,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &5873884712978896494
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -45365,8 +45365,8 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   fill: {fileID: 6124580368033650677}
   countdownBar: {fileID: 6124580368235738034}
-  countDownTime: 99
-  refillTime: 100
+  countDownTime: 300
+  refillTime: 300
 --- !u!1 &6124580368255255808
 GameObject:
   m_ObjectHideFlags: 0
