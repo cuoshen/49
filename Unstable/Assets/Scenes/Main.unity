@@ -21037,7 +21037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd213e3304448a4fbf0ff0b7a5e2e40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 7478306772835622867}
   sequenceNumber: 6
 --- !u!33 &4853696725019727779
 MeshFilter:
@@ -21905,7 +21905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd213e3304448a4fbf0ff0b7a5e2e40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 7478306772835622867}
   sequenceNumber: 3
 --- !u!135 &4853696725260336228
 SphereCollider:
@@ -23378,7 +23378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd213e3304448a4fbf0ff0b7a5e2e40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 7478306772835622867}
   sequenceNumber: 1
 --- !u!23 &4853696725630175968
 MeshRenderer:
@@ -24089,7 +24089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd213e3304448a4fbf0ff0b7a5e2e40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 7478306772835622867}
   sequenceNumber: 5
 --- !u!33 &4853696726031471210
 MeshFilter:
@@ -25155,7 +25155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd213e3304448a4fbf0ff0b7a5e2e40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 7478306772835622867}
   sequenceNumber: 2
 --- !u!135 &4853696726383524008
 SphereCollider:
@@ -26258,7 +26258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd213e3304448a4fbf0ff0b7a5e2e40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 7478306772835622867}
   sequenceNumber: 4
 --- !u!33 &4853696726698693995
 MeshFilter:
@@ -29988,7 +29988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08d46d139f897684fbe6c7390d205cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 7478306772835622867}
   color: blue
 --- !u!33 &5873884711166130960
 MeshFilter:
@@ -30755,7 +30755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08d46d139f897684fbe6c7390d205cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 7478306772835622867}
   color: purple
 --- !u!1001 &5873884711380254663
 PrefabInstance:
@@ -32623,7 +32623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08d46d139f897684fbe6c7390d205cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 7478306772835622867}
   color: green
 --- !u!1001 &5873884711631270524
 PrefabInstance:
@@ -34335,7 +34335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08d46d139f897684fbe6c7390d205cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 7478306772835622867}
   color: green
 --- !u!1 &5873884711977035431 stripped
 GameObject:
@@ -34633,7 +34633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08d46d139f897684fbe6c7390d205cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 7478306772835622867}
   color: yellow
 --- !u!135 &5873884712031025405
 SphereCollider:
@@ -37713,7 +37713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08d46d139f897684fbe6c7390d205cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 7478306772835622867}
   color: blue
 --- !u!4 &5873884712492092949
 Transform:
@@ -39167,7 +39167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08d46d139f897684fbe6c7390d205cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 7478306772835622867}
   color: red
 --- !u!135 &5873884712638058255
 SphereCollider:
@@ -53979,7 +53979,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4466220083757315366, guid: e99f27b1087a5a745b90b4b404321c08, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.64
+      value: 34.67
       objectReference: {fileID: 0}
     - target: {fileID: 4466220083757315366, guid: e99f27b1087a5a745b90b4b404321c08, type: 3}
       propertyPath: m_LocalPosition.y
@@ -53987,7 +53987,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4466220083757315366, guid: e99f27b1087a5a745b90b4b404321c08, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.61
+      value: 47.56
       objectReference: {fileID: 0}
     - target: {fileID: 4466220083757315366, guid: e99f27b1087a5a745b90b4b404321c08, type: 3}
       propertyPath: m_LocalRotation.w
